@@ -1,0 +1,4 @@
+pip install twarc
+twarc2 configure
+
+API key, API key secret, Bearer token, Access token, Access Token Secret : Required  
