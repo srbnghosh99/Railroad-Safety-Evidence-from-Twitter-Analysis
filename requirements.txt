@@ -1,4 +1,9 @@
-pip install twarc
+pip3 install twarc
 twarc2 configure
+pip3 install --upgrade twarc-csv
+pip3 install wordsegment emoji
+pip3 install bertopic
+pip3 install flair
+pip3 install transformers
 
 API key, API key secret, Bearer token, Access token, Access Token Secret : Required  
