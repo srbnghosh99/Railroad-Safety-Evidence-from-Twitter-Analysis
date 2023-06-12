@@ -62,12 +62,13 @@ def clean_text(tweet):
     return text.strip()
 
 
-my_stopwords = nltk.corpus.stopwords.words('english')
-word_rooter = nltk.stem.snowball.PorterStemmer(ignore_stopwords=False).stem
-my_punctuation = '!"$%&\'()*+,-./:;<=>?[\]^_`{|}~•@'
+
 
 # cleaning master function
 def clean_tweet(tweet, bigrams=False):
+    my_stopwords = nltk.corpus.stopwords.words('english')
+    word_rooter = nltk.stem.snowball.PorterStemmer(ignore_stopwords=False).stem
+    my_punctuation = '!"$%&\'()*+,-./:;<=>?[\]^_`{|}~•@'
     tweet = remove_users(tweet)
     tweet = remove_links(tweet)
     tweet = tweet.lower() # lower case
@@ -84,8 +85,7 @@ def clean_tweet(tweet, bigrams=False):
                                             for i in range(len(tweet_token_list)-1)]
     tweet = ' '.join(tweet_token_list)
     return tweet
-     
-
+    
 
 def parse_args():
    
@@ -99,34 +99,35 @@ def main():
     inputs=parse_args()
     print(inputs.filename)
     df = pd.read_csv(inputs.filename)
-    
-    
-    # df = df[['id', 'conversation_id',
-    #    'referenced_tweets.replied_to.id', 'referenced_tweets.retweeted.id',
-    #    'referenced_tweets.quoted.id', 'author_id', 'in_reply_to_user_id',
-    #    'retweeted_user_id', 'quoted_user_id', 'created_at', 'text', 'source',
-    #    'public_metrics.like_count', 'public_metrics.quote_count',
-    #    'public_metrics.reply_count', 'public_metrics.retweet_count',
-    #    'author.id', 'author.created_at', 'author.username', 'author.name',
-    #    'author.description', 'author.entities.description.cashtags',
-    #    'author.entities.description.hashtags',
-    #    'author.entities.description.mentions', 'retweeted', 'mentioned',
-    #    'hashtags', 'links', 'clean_text', 'clean_tweet', 'Geotag',
-    #    'GeoMention', 'OrganizationTag', 'OrganizationMention']]
+    print(df.shape)
     print(df.columns)
-    print(df)
-    # df['retweeted'] = df.text.apply(find_retweeted)
-    # df['mentioned'] = df.text.apply(find_mentioned)
-    # df['hashtags'] = df.text.apply(find_hashtags)
-    # df['links'] = df.text.apply(find_links)
-    # df['clean_text'] = df.text.apply(clean_text)
-    # df['clean_tweet'] = df.text.apply(clean_tweet)
-    # df['clean_tweet']=df['clean_tweet'].fillna("")
-    # # df1 =  df.drop_duplicates(subset = "clean_tweet").reset_index()
-    # df.to_csv("/Users/shrabanighosh/Documents/GitHub/untitled folder/Railroad-Safety-Evidence-from-Twitter-Analysis/cleaned_tweet.csv")
-    # print("file size",df.shape)
+    print(df[['clean_text', 'clean_tweet','retweeted', 'Geotag',
+       'GeoMention', 'OrganizationTag', 'OrganizationMention']])
     # print(df)
-    # print("file save as clean_tweet.csv")
+    df['retweeted'] = df.text.apply(find_retweeted)
+    df['mentioned'] = df.text.apply(find_mentioned)
+    df['hashtags'] = df.text.apply(find_hashtags)
+    df['links'] = df.text.apply(find_links)
+    df['clean_text'] = df.text.apply(clean_text)
+    df['clean_tweet'] = df.text.apply(clean_tweet)
+    df['clean_tweet']=df['clean_tweet'].fillna("")
+    # df1 =  df.drop_duplicates(subset = "clean_tweet").reset_index()
+    df = df[['id', 'conversation_id',
+    'referenced_tweets.replied_to.id', 'referenced_tweets.retweeted.id',
+    'referenced_tweets.quoted.id', 'author_id', 'in_reply_to_user_id',
+    'retweeted_user_id', 'quoted_user_id', 'created_at', 'text', 'source',
+    'public_metrics.like_count', 'public_metrics.quote_count',
+    'public_metrics.reply_count', 'public_metrics.retweet_count',
+    'author.id', 'author.created_at', 'author.username', 'author.name',
+    'author.description', 'author.entities.description.cashtags',
+    'author.entities.description.hashtags',
+    'author.entities.description.mentions', 'retweeted', 'mentioned',
+    'hashtags', 'links', 'clean_text', 'clean_tweet', 'Geotag',
+    'GeoMention', 'OrganizationTag', 'OrganizationMention']]
+    df.to_csv("/Users/shrabanighosh/Documents/GitHub/untitled folder/Railroad-Safety-Evidence-from-Twitter-Analysis/cleaned_tweet.csv")
+    print("file size",df.shape)
+    print("file save as clean_tweet.csv")
+    print(df)
   
 
 if __name__ == '__main__':
