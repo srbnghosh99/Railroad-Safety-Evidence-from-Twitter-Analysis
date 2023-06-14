@@ -1,3 +1,10 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Jun 13 22:31:38 EDT 2023
+
+@author: shrabanighosh
+"""
 import pandas as pd
 
 df = pd.read_csv("/content/tweet_topic_info_37K.csv")
