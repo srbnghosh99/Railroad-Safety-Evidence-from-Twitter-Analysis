@@ -19,4 +19,5 @@ filename: tweets_trespassing2.csv, tweets_trespassing2.json
 
  ## Number of tweets
 Total number of tweet 98240
-Number of tweets in english language 93239. 
+Number of tweets in english language 93239
+
