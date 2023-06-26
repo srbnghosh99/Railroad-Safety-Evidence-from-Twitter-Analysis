@@ -24,9 +24,19 @@ irr = irr[0:178]
 irr_topic = irr[~irr["Comments"].str.contains('All tweets are relevant')]
 irr_topic_list =  irr_topic['Topic'].tolist()
 
+searchwords = ['baseball','ball','basketball','sports','football',
+               'innings','inning','game','match','score','monarchs',
+               'saltdogs','hoppers','coach','coaches','players',
+               'bombers','rookie','crewe','bradford','cheifs',
+               'lament','hoosic','panthers','gonuts','wingnuts',
+               'redhawks','blackhawks','whitehall','jumponthetra',
+               'waynoka','garrett','fulton','sparksride','sparks',
+               'airhogs','gamechanger','newton','cougars',
+               'railcats','altoona','brunswick','concert','durand',
+               'hornets','cleburne','soccer','hockey','softball','crrbaseball','wedigbaseball',
+               'busco_baseball','luersbaseball','roster','ladyrr','eagles','victory','knights',
+                'horseshoe','milkmen','unemployment','retirement']
 
-searchwords = ['baseball','railroaders','RAILROADERS','Railroaders','ball','basketball','sports','football','innings']
-# searchwords = ['baseball','RAILROADERS','Railroaders','ball','basketball','sports','football','innings']
 appended_data1 = []
 # irr_topic_list = list(range(177,416))
 for i in irr_topic_list:
