@@ -37,6 +37,12 @@ searchwords = ['baseball','ball','basketball','sports','football',
                'busco_baseball','luersbaseball','roster','ladyrr','eagles','victory','knights',
                 'horseshoe','milkmen','unemployment','retirement']
 
+['airhogs','gamechanger','newton','cougars','railcats','altoona','brunswick','concert','durand','hornets','cleburne','soccer','hockey','softball','crrbaseball','wedigbaseball','busco_baseball','luersbaseball','roster','ladyrr','eagles','victory','knights','horseshoe','milkmen','unemployment','retirement', 'private property', 'lady railroaders','freight','champions','win','circus train','nfl','gym','gamechanger','nickiminaj','hijackers','artyom','ocean railroaders']
+
+
+we deleted very frequenctly used keywords
+ 
+
 appended_data1 = []
 # irr_topic_list = list(range(177,416))
 for i in irr_topic_list:
