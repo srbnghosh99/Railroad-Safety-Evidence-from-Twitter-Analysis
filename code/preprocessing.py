@@ -58,8 +58,11 @@ def clean_text(tweet):
     text = re.sub(r'#([\w\-]+)', r'', text) 
     text = demojize(text, delimiters=(' :', ': '))
     text = re.sub(r'\s+', ' ', text)
-    text = re.sub(r'\n', '', text)  # remove newlines
+    text = re.sub(r'\\n', '', text)  # remove newlines
     return text.strip()
+
+def lower_case(tweet):
+    return tweet.lower()
 
 
 
@@ -75,7 +78,7 @@ def clean_tweet(tweet, bigrams=False):
     tweet = re.sub('['+my_punctuation + ']+', ' ', tweet) # strip punctuation
     tweet = re.sub('\s+', ' ', tweet) #remove double spacing
     tweet = re.sub('([0-9]+)', '', tweet) # remove numbers
-    tweet_token_list = [word for word in tweet.split(' ')
+    tweet_token_list = [word for word in tweet.split()
                             if word not in my_stopwords] # remove stopwords
 
     # tweet_token_list = [word_rooter(word) if '#' not in word else word
@@ -101,16 +104,16 @@ def main():
     df = pd.read_csv(inputs.filename)
     print(df.shape)
     print(df.columns)
-    print(df[['clean_text', 'clean_tweet','retweeted', 'Geotag',
-       'GeoMention', 'OrganizationTag', 'OrganizationMention']])
     # print(df)
     df['retweeted'] = df.text.apply(find_retweeted)
     df['mentioned'] = df.text.apply(find_mentioned)
     df['hashtags'] = df.text.apply(find_hashtags)
     df['links'] = df.text.apply(find_links)
     df['clean_text'] = df.text.apply(clean_text)
-    df['clean_tweet'] = df.text.apply(clean_tweet)
+    df['clean_tweet'] = df.clean_text.apply(clean_tweet)
     df['clean_tweet']=df['clean_tweet'].fillna("")
+    df['lower_text'] = df.text.apply(lower_case)
+    df = df.dropna(subset=['clean_tweet'])
     # df1 =  df.drop_duplicates(subset = "clean_tweet").reset_index()
     df = df[['id', 'conversation_id',
     'referenced_tweets.replied_to.id', 'referenced_tweets.retweeted.id',
@@ -122,9 +125,8 @@ def main():
     'author.description', 'author.entities.description.cashtags',
     'author.entities.description.hashtags',
     'author.entities.description.mentions', 'retweeted', 'mentioned',
-    'hashtags', 'links', 'clean_text', 'clean_tweet', 'Geotag',
-    'GeoMention', 'OrganizationTag', 'OrganizationMention']]
-    df.to_csv("/Users/shrabanighosh/Documents/GitHub/untitled folder/Railroad-Safety-Evidence-from-Twitter-Analysis/cleaned_tweet.csv")
+    'hashtags', 'links', 'clean_text', 'clean_tweet', 'lower_text']]
+    df.to_csv("./cleaned_tweet.csv")
     print("file size",df.shape)
     print("file save as clean_tweet.csv")
     print(df)
