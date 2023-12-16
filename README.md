@@ -1,8 +1,19 @@
 # Railroad Trespassing and Safety: A Systematic Analysis of Twitter Data
 
-#Overview
-
+## Overview
 This is the completed version of codes for the paper "Railroad Trespassing and Safety: A Systematic Analysis of Twitter Data"
+## Data
+This folder contains code data_collection.ipynb is used in data collection and save in csv file format. 
+## Data Processing
+The code preprocessing.py is used preprocess data and save in csv file format. 
+## Statistical analysis and k-clique percolation
+Simple Python codes for data analysis.
+## Results
+All numerical results can be found here in .npy format.
+## Model
+The Python code for simulation of clique networks and their analysis.
+
+
 
 The railroad safety related twitter data analysis divided into six parts:
   
