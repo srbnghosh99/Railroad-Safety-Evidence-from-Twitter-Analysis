@@ -6,7 +6,9 @@ This is the completed version of codes for the paper "Railroad Trespassing and S
 This folder contains code data_collection.ipynb is used in data collection and save in csv file format. 
 ## Data Processing
 The code preprocessing.py is used preprocess data and save in csv file format. 
-## Statistical analysis and k-clique percolation
+# User analysis
+Simple Python codes for data analysis.
+## Topic, Sentiment, Emotion and 
 Simple Python codes for data analysis.
 ## Results
 All numerical results can be found here in .npy format.
