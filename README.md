@@ -1,4 +1,8 @@
-# Railroad-Safety-Evidence-from-Twitter-Analysis
+# Railroad Trespassing and Safety: A Systematic Analysis of Twitter Data
+
+Overview
+
+This is the completed version of codes for the paper "Railroad Trespassing and Safety: A Systematic Analysis of Twitter Data"
 
 The railroad safety related twitter data analysis divided into six parts:
   
