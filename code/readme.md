@@ -23,7 +23,7 @@ python3 emotion_detction.py --filename inputfilename --outputfilename filename (
 
 python3 topic_modeling.py --filename inputfilename --outputfilename filename (csv format)
 
-python3 emotion_detection.py --filename inputfilename --outputfilename filename (csv format)
+python3 twitter-emotion-recognition-master/emotion_detect.py --filename inputfilename --outputfilename filename (csv format)
 
 ## Hashtag and mention analysis
 *This step used hashtag(#) and mention(@) in the tweets to extract geographical location and organizations information*
