@@ -15,11 +15,15 @@ python3 remove_keywords.py
 
 python3 user_analysis.py --filename filename(csv format)
 
-## Emotion detection
+## Emotion detection, sentiment prediction, topic modeling
 
 pip install -r emotion_detection_requirements.txt
 
 python3 emotion_detction.py --filename inputfilename --outputfilename filename (csv format)
+
+python3 topic_modeling.py --filename inputfilename --outputfilename filename (csv format)
+
+python3 emotion_detection.py --filename inputfilename --outputfilename filename (csv format)
 
 
 
