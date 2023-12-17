@@ -65,8 +65,8 @@ def topic_modeling(filename):
 
     print(top.shape)
     print(info_df.shape)
-    #results = pd.DataFrame({"Doc": docs, "Topic": topics})
-    #result.to_csv("docs_vs_topic.csv")
+    results = pd.DataFrame({"Doc": docs, "Topic": topics})
+    result.to_csv("docs_vs_topic.csv")
     print("execution ended")
 
 
