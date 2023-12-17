@@ -20,9 +20,9 @@ All numerical results are created in csv format
 ## Description of steps
 The railroad-related twitter data analysis is divided into six parts:
   
-  1. Data cleaning process: to remove tweets that are not related to railroad, rail, safety
-  2. User analysis: identify users and type of users involved in posting rail safety-related tweets from all over the world
-  3. Topic modeling: extract the topics on railsafety-related tweets
-  4. Sentiment analysis: identify the sentiments(pos,neg,neu) of the tweets
-  5. Emotion Analysis: identify the emotional (joy,..) of tweets
-  6. Hashtags and Mention analysis: extract hashtags and mentions from tweets and utilize that information for extracting organizational and geographical information 
+  1. Data cleaning process: Remove tweets that are not related to railroad, rail, safety.
+  2. User analysis: Identify users and the type of users involved in posting rail safety-related tweets worldwide. Group the users in different subgroups. 
+  3. Topic modeling: Extract topics of rail safety-related tweets.
+  4. Sentiment analysis: Identify the sentiments(pos,neg,neu) of the tweets.
+  5. Emotion Analysis: Identify the emotional (joy,..) of tweets.
+  6. Hashtags and Mention analysis: Extract hashtags and mentions from tweets and utilize that information for extracting organizational and geographical information. 
