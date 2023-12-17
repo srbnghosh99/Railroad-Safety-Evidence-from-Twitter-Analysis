@@ -7,6 +7,9 @@ import umap
 import flair
 from flair.embeddings import TransformerDocumentEmbeddings
 from sentence_transformers import SentenceTransformer
+import argparse
+import sys
+from argparse import ArgumentParser, ArgumentDefaultsHelpFormatter
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 
