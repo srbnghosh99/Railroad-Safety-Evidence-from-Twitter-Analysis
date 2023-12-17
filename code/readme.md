@@ -1,7 +1,7 @@
 ## How to execute Python files?
 
 ## Data preprocessing 
-*This step includes l, stemming, lemmatization, removing punctuation, stop words, links, numeric values, etc.*
+*This step includes stemming, lemmatization, removing punctuation, stop words, links, numeric values, etc.*
 
 python3 proprocessing.py --filename filename(csv format)
 
