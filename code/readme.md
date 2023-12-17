@@ -25,5 +25,5 @@ python3 topic_modeling.py --filename inputfilename --outputfilename filename (cs
 
 python3 emotion_detection.py --filename inputfilename --outputfilename filename (csv format)
 
-
+## Emotion detection, sentiment prediction, topic modeling
 
