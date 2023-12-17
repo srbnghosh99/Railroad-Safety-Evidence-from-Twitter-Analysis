@@ -25,5 +25,8 @@ python3 topic_modeling.py --filename inputfilename --outputfilename filename (cs
 
 python3 emotion_detection.py --filename inputfilename --outputfilename filename (csv format)
 
-## Emotion detection, sentiment prediction, topic modeling
+## Hashtag and mention analysis
+*This step used hashtag(#) and mention(@) in the tweets to extract geographical location and organizations information*
+
+python3 hashtag_mention_analysis.py --filename inputfilename --outputfilename filename (csv format)
 
