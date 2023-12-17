@@ -9,7 +9,12 @@ The code preprocessing.py is used preprocess data and save in csv file format.
 # User analysis
 Simple Python codes for data analysis.
 ## Topic, Sentiment, Emotion and 
-Simple Python codes for data analysis.
+We used some existing models for topic modeling, sentiment and emotion prediction. 
+Topic modeling: "https://github.com/MaartenGr/BERTopic"
+Sentiment prediction: "https://huggingface.co/cardiffnlp/twitter-roberta-base-sentiment", 
+Emotion prediction "https://github.com/nikicc/twitter-emotion-recognition"
+
+
 ## Results
 All numerical results can be found here in .npy format.
 ## Model
