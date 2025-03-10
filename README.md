@@ -1,5 +1,5 @@
 # Railroad Trespassing and Safety: A Systematic Analysis of Twitter Data
-https://doi.org/10.1016/j.cstp.2024.101154
+The paper is published: link -> https://doi.org/10.1016/j.cstp.2024.101154
 
 
 ## Overview
