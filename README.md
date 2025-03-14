@@ -30,4 +30,16 @@ The railroad-related twitter data analysis is divided into six parts:
   3. Topic modeling: Extract topics of rail safety-related tweets.
   4. Sentiment analysis: Identify the sentiments(pos,neg,neu) of the tweets.
   5. Emotion Analysis: Identify the emotional (joy,..) of tweets.
-  6. Hashtags and Mention analysis: Extract hashtags and mentions from tweets and utilize that information for extracting organizational and geographical information. 
+  6. Hashtags and Mention analysis: Extract hashtags and mentions from tweets and utilize that information for extracting organizational and geographical information.
+
+## Citation
+```bash
+@article{ghosh2024railroad,
+  title={Railroad safety: A systematic analysis of Twitter data},
+  author={Ghosh, Shrabani and Chen, Yuting and Dou, Wenwen},
+  journal={Case Studies on Transport Policy},
+  volume={15},
+  pages={101154},
+  year={2024},
+  publisher={Elsevier}
+}
